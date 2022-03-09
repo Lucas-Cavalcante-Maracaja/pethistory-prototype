@@ -50,7 +50,7 @@ function HeaderMobileComponent() {
     }, [router.asPath]);
     return (
         <>
-            <div style={{
+            <div  class="mobile" style={{
                 position: "fixed",
                 left: 0,
                 top: 0,

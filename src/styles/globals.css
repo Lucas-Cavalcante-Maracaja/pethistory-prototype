@@ -12,7 +12,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.mobile{
 
+  display:block
+}
+.desktop{
+
+  display:none
+}
 * {
   box-sizing: border-box;
 }
@@ -37,5 +44,13 @@ a {
   }
   .sknui-box{
 
+  }
+  .mobile{
+
+    display:none
+  }
+  .desktop{
+
+    display:block
   }
 }

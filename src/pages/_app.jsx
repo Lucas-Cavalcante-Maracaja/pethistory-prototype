@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-        {isMobile ? <HeaderMobileComponent /> : <HeaderComponent />}
+        <HeaderMobileComponent />  <HeaderComponent />
         <Component {...pageProps} />
 
         {isMobile ? <FooterMobileComponent /> : ""}
