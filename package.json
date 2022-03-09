@@ -6,15 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@reduxjs/toolkit": "^1.8.0",
+    "@skynexui/components": "^1.24.6",
     "next": "12.1.0",
+    "next-redux-wrapper": "^7.0.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-device-detect": "^2.1.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.6",
+    "react-tabs": "^3.2.3",
+    "redux": "^4.1.2",
+    "swr": "^1.2.2"
   },
   "devDependencies": {
+    "cypress": "^9.2.0",
     "eslint": "8.9.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "redux-devtools-extension": "^2.13.9"
   }
 }
