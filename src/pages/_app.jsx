@@ -14,7 +14,12 @@ import { isMobile } from 'react-device-detect';
 
 function MyApp({ Component, pageProps }) {
 
-
+  useEffect(()=>{
+    if (window.Cypress) {
+      window.store = store
+    }
+    
+  },[])
 
   return (
     <>

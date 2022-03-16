@@ -31,7 +31,7 @@ function FooterMobileComponent() {
     const user = useSelector((state) => state.user);
     return (
         <>
-            <div style={{
+            <div className="mobile" style={{
                 position: "fixed",
                 left: 0,
                 bottom: 0,

@@ -9,7 +9,7 @@ export function useCommonUserAuthSession() {
   useEffect(() => {
     if ((user.name == "" && user.type == "") || !user.type == "common") {
       router.push({
-        pathname: '/'
+        pathname: '/login'
       });
     }
     
@@ -22,7 +22,7 @@ export function useVetUserAuthSession() {
   useEffect(() => {
     if ((user.name == "" && user.type == "") || !user.type == "vet") {
       router.push({
-        pathname: '/'
+        pathname: '/login'
       });
     }
     

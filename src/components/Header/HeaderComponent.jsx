@@ -8,6 +8,7 @@ function HeaderButton(props) {
         <Button
             href={props.href}
             label={props.children}
+            id={"btn"+props.id}
             styleSheet={{
                 marginBottom: "5px",
                 marginRight: "15px"
@@ -57,15 +58,15 @@ function HeaderComponent() {
                             },
                         }}
                     >
-                        <HeaderButton href="/animal">Meus Animais</HeaderButton>
-                        <HeaderButton href="/treatments">Tratamentos</HeaderButton>
+                        <HeaderButton id="Animals"href="/animal">Meus Animais</HeaderButton>
+                        <HeaderButton id="Treatments"href="/treatments">Tratamentos</HeaderButton>
                         {/*
                     <HeaderButton href="/">Organização</HeaderButton>
                     <HeaderButton href="/">Participantes</HeaderButton>
                     <HeaderButton href="/">Minha Conta</HeaderButton>
                     */}
 
-                        <HeaderButton href="/">Sair</HeaderButton>
+                        <HeaderButton id="Out" href="/">Sair</HeaderButton>
 
 
                     </Box>
