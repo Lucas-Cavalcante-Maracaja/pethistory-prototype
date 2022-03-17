@@ -2,13 +2,14 @@
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 import Link from "next/link";
 import appConfig from "../../styles/config.json";
-
+import { useDispatch, useSelector } from 'react-redux';
 function HeaderButton(props) {
+
     return (
         <Button
             href={props.href}
             label={props.children}
-            id={"btn"+props.id}
+            id={"btn" + props.id}
             styleSheet={{
                 marginBottom: "5px",
                 marginRight: "15px"
@@ -23,6 +24,7 @@ function HeaderButton(props) {
 }
 
 function HeaderComponent() {
+    const user = useSelector((state) => state.user);
     return (
         <>
             <div className='desktop'>
@@ -58,16 +60,18 @@ function HeaderComponent() {
                             },
                         }}
                     >
-                        <HeaderButton id="Animals"href="/animal">Meus Animais</HeaderButton>
-                        <HeaderButton id="Treatments"href="/treatments">Tratamentos</HeaderButton>
-                        {/*
+                        {user.type != "" ?
+                            <>
+                                <HeaderButton id="Animals" href="/animal">Meus Animais</HeaderButton>
+                                {user.type != "vet" ? <HeaderButton id="Treatments" href="/treatments">Tratamentos</HeaderButton> : ""}
+                                {/*
                     <HeaderButton href="/">Organização</HeaderButton>
                     <HeaderButton href="/">Participantes</HeaderButton>
                     <HeaderButton href="/">Minha Conta</HeaderButton>
                     */}
 
-                        <HeaderButton id="Out" href="/">Sair</HeaderButton>
-
+                                <HeaderButton id="Out" href="/login">Sair</HeaderButton>
+                            </> : ""}
 
                     </Box>
 

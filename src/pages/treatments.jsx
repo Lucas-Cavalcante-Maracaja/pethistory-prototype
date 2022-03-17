@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Text, Image, Button, Icon } from '@skynexui/components';
-import { animals } from '../lib/data_mock/animalsIndActive'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TreatmentList from '../components/Treatments/TreatmentListComponent';
 import AnimalCard from '../components/Animal/AnimalCardComponent';
@@ -15,11 +14,11 @@ import { useCommonUserAuthSession } from '../lib/hooks/user';
 
 export default function AnimalDetails() {
     const router = useRouter()
-    
+    useCommonUserAuthSession();
     let animal = null
     const [treatmentsActive, setTreatmentsActive] = React.useState([])
     const [treatmentsInactive, setTreatmentsInactive] = React.useState([])
-    useCommonUserAuthSession();
+    
     if (router.query.animal != null) {
         animal = JSON.parse(router.query.animal);
     }

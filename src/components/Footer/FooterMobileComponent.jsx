@@ -21,7 +21,7 @@ function FooterMobileButton(props) {
                 borderLeft: "0.5px solid " + appConfig.theme.colors.primary["green_light"],
                 borderRight: "0.5px solid " + appConfig.theme.colors.primary["green_light"],
                 borderStyle: "solid",
-                width:"100%"
+                width: "100%"
             }}
         />
     )
@@ -43,28 +43,18 @@ function FooterMobileComponent() {
                         flexDirection: 'row'
                     }}
                 >
-                    {user.type == "common" ?
+
+                    {user.type != "" ?
                         <>
                             <FooterMobileButton href="/animal">Meus Animais</FooterMobileButton>
-                            <FooterMobileButton href="/treatments">Tratamentos</FooterMobileButton>
-                            <FooterMobileButton href="/">Sair</FooterMobileButton>
-                        </>
-                        : ""}
-                    {user.type == "vet" ?
-                        <>
-                            <FooterMobileButton href="/vetanimal">Meus Animais</FooterMobileButton>
-                            <FooterMobileButton href="/vettreatments">Tratamentos</FooterMobileButton>
-                            <FooterMobileButton href="/">Sair</FooterMobileButton>
-                        </>
-                        : ""}
+                            {user.type != "vet" ? <FooterMobileButton href="/treatments">Tratamentos</FooterMobileButton> : ""}
+                            <FooterMobileButton href="/login">Sair</FooterMobileButton>
+                        </> : ""}
+
+
+
                 </Box>
             </div>
-
-
-
-
-
-
         </>
     )
 }

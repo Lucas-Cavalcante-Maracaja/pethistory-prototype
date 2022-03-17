@@ -36,7 +36,7 @@ function HeaderMobileComponent() {
     let arrayPages = [
         { key: ["/animal","/vetanimal"], value: "Meus Animais" },
         { key: ["/animaldetails","/vetanimaldetails"], value: animal != null ? animal.name : "Detalhes" },
-        { key: ["/"], value: "Entrar" },
+        { key: ["/login"], value: "Entrar" },
         { key: ["/treatments","/vettreatments"], value: "Tratamentos" }
     ]
 

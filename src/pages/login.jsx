@@ -28,7 +28,7 @@ export default function Login() {
         } else if (password == "14682" && username == "Joana") {
             dispatch(setUser({ name: "Joana", type: "vet" }));
             router.push({
-                pathname: '/vetanimal'
+                pathname: '/animal'
             });
         } else {
             setUserExist(false)

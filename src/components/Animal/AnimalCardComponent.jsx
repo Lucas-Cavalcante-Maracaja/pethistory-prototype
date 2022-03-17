@@ -1,9 +1,11 @@
 import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 import appConfig from '../../styles/config.json';
 import { useRouter  } from 'next/router'
-
+import { useDispatch, useSelector } from 'react-redux';
+ 
 export default function AnimalCard({ animal }) {
     const router = useRouter()
+    const user = useSelector((state) => state.user);
 
     return (
         <>
@@ -69,7 +71,13 @@ export default function AnimalCard({ animal }) {
                             {animal.name}
                         </Text>
                     </Box>
+                        {user.type=="vet"?<Text
+                        styleSheet={{
 
+                            marginVertical: '7px',
+
+                        }}>
+                        Tutor(a): {animal.nameUser}</Text>:""}
                     <Text
                         styleSheet={{
 

@@ -15,5 +15,5 @@ Com telas e controles amigaveis o aplicativo visa simplificar o acesso ao histó
 
 ### Acesso
 
-O protótipo pode ser acessado no link: [hsistoriadopet](https://pethistory-prototype.vercel.app/)
+O protótipo pode ser acessado no link: [historia do pet](https://pethistory-prototype.vercel.app/)
 

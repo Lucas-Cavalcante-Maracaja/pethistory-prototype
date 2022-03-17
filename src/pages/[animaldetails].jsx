@@ -6,7 +6,7 @@ import TreatmentList from '../components/Treatments/TreatmentListComponent';
 import HistoryList from '../components/MedicalHistory/HistoryListComponent';
 import ConditionList from '../components/Conditions/ConditionListComponent';
 import AnimalCard from '../components/Animal/AnimalCardComponent';
-import { useCommonUserAuthSession } from '../lib/hooks/user';
+import { useUserAuthSession } from '../lib/hooks/user';
 import { useRouter } from 'next/router'
 import { treatments } from '../lib/data_mock/treatments'
 import { histories } from '../lib/data_mock/history'
@@ -22,7 +22,7 @@ export default function AnimalDetails() {
     const [treatmentsInactive, setTreatmentsInactive] = React.useState([])
     const [historyList, setHistory] = React.useState([])
     const [conditionList, setConditions] = React.useState([])
-    useCommonUserAuthSession();
+    useUserAuthSession();
 
     if (router.query.animal != null) {
         animal = JSON.parse(router.query.animal);
