@@ -1,8 +1,26 @@
 import AnimalCard from "./AnimalCardComponent"
 import { Box, Text, Image, Button } from '@skynexui/components';
+import { useDispatch, useSelector } from 'react-redux';
 
-export default function  AnimalList ({ animals }) {
-    const cardsArray = animals.map(animal => (
+
+export default function  AnimalList ({ filter,animals }) {
+    const user = useSelector((state) => state.user);
+    const filteredData = animals.filter((el) => {
+        //if no input the return the original
+        if (filter === '') {
+            return el;
+        }
+        //return the item which contains the user input
+        else {
+            if(user.type == "vet"){
+                return el.name.toLowerCase().includes(filter) || el.nameUser.toLowerCase().includes(filter)
+            }else{
+                return el.name.toLowerCase().includes(filter)
+            }
+           
+        }
+    })
+    const cardsArray = filteredData.map(animal => (
       <AnimalCard id={"Animal"+animal.id} key={"Animal"+animal.id}
         animal={animal}
          />

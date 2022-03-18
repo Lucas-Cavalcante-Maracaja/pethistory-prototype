@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Text, Image, Button, Icon } from '@skynexui/components';
-import { animals } from '../lib/data_mock/animalsIndActive'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TreatmentList from '../components/Treatments/TreatmentListComponent';
 import HistoryList from '../components/MedicalHistory/HistoryListComponent';
